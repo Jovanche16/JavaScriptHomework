@@ -1,13 +1,15 @@
-function calculateAge(birthYear, currentYear) {
-    return currentYear - birthYear;
+function calculateAge(birthYear) {
+    let currentYear = new Date().getFullYear();
+    let yourAge = currentYear - birthYear;
+    console.log(`You are ${yourAge} years old.`)
+    return yourAge;
 }
 
 while (true) {
     let yourBirthYear = parseInt(prompt("Please enter your birth year:"));
-    if (!isNaN(yourBirthYear)) {
-        let currentYear = new Date().getFullYear();
-        let yourAge = calculateAge(yourBirthYear, currentYear);
-        console.log(`You are ${yourAge} years old.`)
+
+    if (!isNaN(yourBirthYear) && yourBirthYear < new Date().getFullYear()) {
+        calculateAge(yourBirthYear);
         break;
     }
     else {
