@@ -31,7 +31,7 @@ console.log("Your dog years in human years are " + humanDogAgeCalculator(dogYear
 console.log("-----------------")
 //Homework 3 Part 3
 
-var atmState = 1000.00;
+let atmState = 1000.00;
 function atm(money) {
     if (atmState - money >= 0) {
         atmState -= money;
