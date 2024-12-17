@@ -30,7 +30,7 @@ function getValidLength() {
     let number;
     while (true) {
         number = parseInt(prompt("Enter the length of the array of numbers you want to collect: "));
-        if (!isNaN(number) && number > 0) {
+        if (!isNaN(number) && number > 1) {
             break;
         }
         else {
