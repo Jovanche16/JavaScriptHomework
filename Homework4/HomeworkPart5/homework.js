@@ -41,5 +41,5 @@ function getValidLength() {
 
 let arrayLength = getValidLength();
 let numbersArray = enterNumbers(arrayLength);
-console.log("The sum of the numbers is " + sumOfMinAndMax(numbersArray))
+console.log("The sum of the biggest and smallest numbers is " + sumOfMinAndMax(numbersArray))
 
