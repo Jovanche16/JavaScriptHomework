@@ -1,5 +1,23 @@
 
-let numbers = [2, 4, 5, 6, 8];
+function promptForNumber(message) {
+    let number = parseInt(prompt(message));
+    while (isNaN(number) || number <= 0) {
+        number = parseInt(prompt("Please enter a valid positive number: "));
+    }
+    return number;
+}
+
+function enterNumbers(numberLength) {
+    let numbersArray = [];
+    for (let i = 0; i < numberLength; i++) {
+        let inputNumber = promptForNumber("Enter a number:");
+        numbersArray.push(inputNumber);
+    }
+    return numbersArray;
+}
+
+let numberLength = promptForNumber("Enter lenth of the numbers you want to collect: ");
+let numbers = enterNumbers(numberLength);
 
 let numberList = document.getElementById('numberList');
 let sumElement = document.getElementById('sum');
