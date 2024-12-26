@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+#aDiv, .anotherDiv, div {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#myTitle {
+    color: rgb(0, 140, 255);
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: rgb(4, 0, 255);
+}
+
+h3 {
+    color: rgb(0, 174, 255);
+}
