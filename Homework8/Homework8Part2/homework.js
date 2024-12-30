@@ -1,7 +1,7 @@
 function isColor(strColor) {
 
     if (!strColor) { return; }
-    var s = new Option().style;
+    let s = new Option().style;
     s.color = strColor;
     return s.color == strColor;
 }
@@ -10,10 +10,10 @@ $(document).ready(function () {
     $('#generate').click(function () {
 
         let text = $('#textInput').val();
-        let color = $('#colorInput').val();
+        let strcolor = $('#colorInput').val();
 
-        if (text && isColor(color)) {
-            $("#generatedMessage").css({ "color": color }).text(text);
+        if (text && isColor(strcolor)) {
+            $("#generatedMessage").css({ "color": strcolor }).text(text);
             $('#errorMessage').text('')
         }
         else {
