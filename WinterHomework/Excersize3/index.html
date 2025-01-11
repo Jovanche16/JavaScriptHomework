@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hangman Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hangman</h1>
+
+        <select id="categorySelect">
+            <option value="" disabled selected>Please select a category</option>
+            <option value="Movies">Movies</option>
+            <option value="TVShows">TV Shows</option>
+            <option value="Animals">Animals</option>
+            <option value="Foods">Foods</option>
+            <option value="Books">Books</option>
+            <option value="Countries">Countries</option>
+            <option value="Technologies">Technologies</option>
+        </select>
+
+        <div class="card">
+            <img id="hangman" src="assets/hangman-0.png" alt="Hangman Image" />
+            <ul id="guessWord"></ul>
+        </div>
+
+        <button id="hintButton">
+            <i class="fas fa-lightbulb"></i> <span id="hintText">Show Hint</span>
+        </button>
+        <p id="hint" style="display: none"></p>
+
+        <h1 id="resultMessage"></h1>
+
+        <button id="reset" style="display: none">
+            Reset Game <i class="fas fa-sync-alt"></i>
+        </button>
+
+        <div id="keyboard"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

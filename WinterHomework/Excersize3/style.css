@@ -1,0 +1,175 @@
+body {
+  font-family: "Indie Flower", Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #1b1f5a;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), inset 0 0 0 5px #fff;
+  background: repeating-linear-gradient(
+      #d3d3d3 0,
+      #d3d3d3 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0,
+      #d3d3d3 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    #fff;
+  border: 1px solid #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#categorySelect {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #1b1f5a;
+  background-color: transparent;
+  cursor: pointer;
+  width: 200px;
+  font-family: "Indie Flower", sans-serif;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+#hangman {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+#guessWord {
+  width: 100%; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 5px;
+}
+
+#guessWord li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 22px;
+  text-align: center;
+}
+
+#hintButton {
+  margin-top: 0;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#hintButton i {
+  color: yellow;
+}
+
+#hint {
+  margin: 0;
+}
+
+#keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+button {
+  font-family: "Indie Flower", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  color: #1b1f5a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: rgb(207, 38, 38);
+  cursor: not-allowed;
+}
+
+.guessed-letter {
+  color: green;
+}
+
+#resultMessage {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#reset {
+  display: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4caf50;
+  border: none;
+  cursor: pointer;
+}
+
+#reset:hover {
+  color: #45a049;
+}
+
+.correct-letter {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  padding: 15px;
+}
+
+.correct-letter:after {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border: 2px solid rgb(3, 3, 80);
+  content: "";
+  top: 5px;
+  left: 5px;
+  border-radius: 100px 50px 150px;
+  transform: rotate(-5deg);
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #hangman {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+}
